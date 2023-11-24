@@ -15,20 +15,25 @@
         </form action = "/add_task" method "post" 
         <label for="task">Task:</label><br>
         <input type=" "text" id = "task" name = "task"><br>
-        <label for="weekday">Weekday:</label><br>
-        <select id="weekday" name="weekday">
-            <option value="Monday">Monday</option>
-            <option value="Tuesday"></option>
-            <option value="Wednesday"></option>
-            <option value="Thursday"></option>
-            <option value="Friday"></option>
-            <option value="Saturday"></option>
-            <option value="Sunday"></option>
-        </select><br>
-        <label for="time_allotment">Time Allotment:</label><br>
-        <input type="number" id="time_allotment" name="time_allotment"><br>
-        <input type="submit" value="Submit">
-            </form>
+      <label>Days:</label><br>
+    <input type="checkbox" id="Monday" name="days" value="Monday">
+    <label for="Monday">Monday</label><br>
+    <input type="checkbox" id="Tuesday" name="days" value="Tuesday">
+    <label for="Tuesday">Tuesday</label><br>
+    <input type="checkbox" id="Wednesday" name="days" value="Wednesday">
+    <label for="Wednesday">Wednesday</label><br>
+    <input type="checkbox" id="Thursday" name="days" value="Thursday">
+    <label for="Thursday">Thursday</label><br>
+    <input type="checkbox" id="Friday" name="days" value="Friday">
+    <label for="Friday">Friday</label><br>
+    <input type="checkbox" id="Saturday" name="days" value="Saturday">
+    <label for="Saturday">Saturday</label><br>
+    <input type="checkbox" id="Sunday" name="days" value="Sunday">
+    <label for="Sunday">Sunday</label><br>
+    <label for="time_allotment">Time Allotment:</label><br>
+    <input type="number" id="time_allotment" name="time_allotment"><br>
+    <input type="submit" value="Submit">
+    </form>
         </header>
     </div>
 </body>

@@ -1,4 +1,4 @@
-from flask import Flask, render_template;
+from flask import Flask, render_template, request, redirect, url_for;
 import sqlite3
 
 app = Flask(__name__)
@@ -20,7 +20,14 @@ def init_sqlite_db():
               weekday TEXT, task TEXT, FOREIGN KEY(weekday) REFERENCES weekdays(day)
               )
               """
-    
+    )
+#create table for task_days
+    c.execute("""
+              CREATE TABLE IF NOT EXISTS task_days
+              (id INTEGER PRIMARY KEY AUTOINCREMENT,task_id INTEGER,
+               FOREIGN KEY(task_id) REFERENCES daily_tasks(id),day TEXT
+              )"""
+              )
     
 #commit changes to db
     conn.commit()
@@ -29,3 +36,22 @@ def init_sqlite_db():
 @app.route("/")
 def hello_world():
     return render_template("index.html", title="Hello")
+
+@app.route("/add_task", methods=["POST"])
+def add_task():
+    task = request.form["task"]
+    days = request.form.getlist("days")
+    time_allotment = request.form["time_allotment"]
+    conn =sqlite3.connect('database.db')
+    c = conn.cursor()
+    c.execute("INSERT INTO daily_tasks (task, time_allotment) VALUES (?,?)", (task, time_allotment))
+    task_id = c.lastrowid
+    for day in days:
+        c.execute("INSERT INTO task_days (task_id, day) VALUES (?,?)" (task_id, day))
+
+
+    conn.commit()
+    conn.close()
+
+    return redirect(url_for("index"))
+
