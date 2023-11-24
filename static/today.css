@@ -1,0 +1,21 @@
+.task {
+    /* Style for the task container */
+    .black-box {
+        background-color: black;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.play-pause {
+    /* Style for the play/pause button */
+}
+
+.progress-bar {
+    /* Style for the progress bar container */
+
+}
+
+.progress {
+    /* Style for the progress bar */
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to My Landing Page</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='today.css') }}">
+  <script src="{{ url_for('static', filename='today.js') }}"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    p {
+      color: #666;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to My Landing Page</h1>
+    <p>This is a basic HTML landing page.</p>
+    <a href="#" class="btn">Get Started</a>
+  </div>
+  <div id="task-container">
+    <!-- Task 1 -->
+    <div class="task">
+      <button class="play-pause">Play</button>
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+    </div>
+    <!-- More tasks... -->
+  </div>
+</body>
+</html>

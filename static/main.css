@@ -1,45 +1,48 @@
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-        sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
-}
-
-.App {
+.app-header {
+    font-size: 50px; /* Adjust the font size as needed */
     text-align: center;
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+.checkbox-container {
+    display: flex; /* Use flexbox to align checkboxes in a row */
+    justify-content: space-between; /* Space the boxes evenly across the container */
 }
 
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
+.go-to-today {
+    font-size: 20px; /* Adjust the font size as needed */
+    text-align: center;
+    margin-top: 20px; /* Adjust the margin-top value to lower the link */
+}
+
+/* Hide the default checkbox */
+html input[type="checkbox"] {
+    display: none !important;
+}
+
+/* Highlight the box around the day when checkbox is checked */
+.checkbox-container input[type="checkbox"]:checked + label {
+    border: 2px solid green;
+}
+
+/* Increase the size of the task and time allotment boxes */
+.task-box,
+.time-allotment-box {
+    width: 300px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+}
+
+.submit {
+    margin-top: 35px; /* Adjust the margin-top value to create space between the submit box and the link */
+}
+
+.today-link {
+    font-size: 14px !important; 
+    margin-bottom: 50px
+    /* Adjust the font size as needed and add !important to override other styles */
+}
+
+body {
+    background-color: black;
     color: white;
 }
 
-.App-link {
-    color: #61dafb;
-}
-
-.heart {
-    color: #ff0000;
-}
-
-.small {
-    font-size: 0.75rem;
-}
