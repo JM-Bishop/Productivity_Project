@@ -1,48 +1,71 @@
+/* Reset and base styles */
+body {
+    font-family: 'Open Sans', sans-serif; /* Elegant and readable font */
+    background-color: #f5f5f5; /* Light grey background for a subtle look */
+    color: #333; /* Dark grey color for text */
+    line-height: 1.6;
+}
+
+/* Header styles */
 .app-header {
-    font-size: 50px; /* Adjust the font size as needed */
+    font-size: 2.5rem; /* Responsive font size */
     text-align: center;
+    color: #005A9C; /* A professional blue tone */
 }
 
+/* Checkbox container with evenly spaced elements */
 .checkbox-container {
-    display: flex; /* Use flexbox to align checkboxes in a row */
-    justify-content: space-between; /* Space the boxes evenly across the container */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
 }
 
+/* Go to Today link with more refined spacing and style */
 .go-to-today {
-    font-size: 20px; /* Adjust the font size as needed */
+    font-size: 1.25rem;
     text-align: center;
-    margin-top: 20px; /* Adjust the margin-top value to lower the link */
+    margin-top: 1rem;
+    color: #007BFF; /* Bootstrap primary color for familiarity */
+    text-decoration: none; /* Remove underline from links */
 }
 
-/* Hide the default checkbox */
-html input[type="checkbox"] {
-    display: none !important;
-}
-
-/* Highlight the box around the day when checkbox is checked */
+/* Custom style for checkbox */
 .checkbox-container input[type="checkbox"]:checked + label {
-    border: 2px solid green;
+    border: 2px solid #28A745; /* Bootstrap success color for a pleasant green */
 }
 
-/* Increase the size of the task and time allotment boxes */
+/* Task and time allotment boxes with subtle shadows for depth */
 .task-box,
 .time-allotment-box {
-    width: 300px; /* Adjust the width as needed */
-    height: 300px; /* Adjust the height as needed */
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    margin: 0.5rem; /* Uniform margin for clean spacing */
 }
 
+/* Submit button with more prominent style */
 .submit {
-    margin-top: 35px; /* Adjust the margin-top value to create space between the submit box and the link */
-}
-
-.today-link {
-    font-size: 14px !important; 
-    margin-bottom: 50px
-    /* Adjust the font size as needed and add !important to override other styles */
-}
-
-body {
-    background-color: black;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF; /* Bootstrap primary color */
     color: white;
+    text-align: center;
+    border: none;
+    border-radius: 5px; /* Rounded corners for a modern look */
+    cursor: pointer;
+    margin-top: 1rem;
 }
 
+/* Hover effect for buttons */
+.submit:hover {
+    background-color: #0056b3; /* A darker shade of the primary color */
+}
+
+/* Style adjustments for 'Today' link with a more subtle approach */
+.today-link {
+    font-size: 1rem;
+    color: #007BFF;
+    margin-bottom: 2rem; /* More space at the bottom */
+    text-decoration: underline; /* Indicate it's clickable */
+}
